@@ -7,6 +7,7 @@ import express, {
 } from "express";
 import cors from "cors";
 import { userController } from "./app/modules/User/user.controller";
+import { adminController } from "./app/modules/Admin/admmin.controller";
 const app: Application = express();
 
 app.use(cors());
@@ -19,5 +20,6 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/user", userController.createAdmin);
+app.use("/api/v1/admin", adminController.getAllAdmin);
 
 export default app;
