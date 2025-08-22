@@ -12,7 +12,7 @@ const getAllAdmin = async (req: Request, res: Response) => {
   } catch (err) {
     res.status(500).send({
       succes: false,
-      message: "all admin find succesfully ",
+      message: "all admin find ",
       data: err,
     });
   }
